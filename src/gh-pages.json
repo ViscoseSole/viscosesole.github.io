@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "name": "Simon Game",
+      "description": ""
+    },
+    {
+      "name": "Kando",
+      "description": "Minimalistic task management utility for daily tasks"
+    },
+    {
+      "name": "Markdown Previewer",
+      "description": "Translate Markdown into HTML"
+    }
+  ]
+}

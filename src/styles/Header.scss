@@ -1,0 +1,69 @@
+#Header {
+  width: 100vw;
+  height: auto;
+  display: flex;
+
+  & .Title-Full {
+    opacity: 0;
+  }
+
+  &:hover {
+    .Header-Title .Title-Partial {
+      letter-spacing: 10px;
+    }
+
+    .Title-Full {
+      opacity: 1;
+    }
+  }
+
+  & .Header-Title {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    & * {
+      transition: all 0.3s ease;
+      transition-delay: .2s;
+    }
+
+    & span {
+      font-size: 5vw;
+      letter-spacing: 3px;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    & .Header-Title-GitHub__icon {
+      transform: translateX(-3vw);
+      width: 2.8vw;
+      height: 2.8vw;
+      cursor: pointer;
+    }
+  }
+
+  &:hover {
+    .Header-Title-GitHub__icon {
+      transform: translateX(10vw);
+    }
+  }
+
+  @media (max-width: 800px) {
+    &:hover {
+      .Header-Title .Title-Partial {
+        letter-spacing: 4px;
+      }
+    }
+  }
+
+  @media (max-width: 300px) {
+    &:hover {
+      .Header-Title .Title-Partial {
+        letter-spacing: 3.2px;
+      }
+    }
+  }
+}
