@@ -3,17 +3,16 @@
   height: auto;
   display: flex;
 
-  & .Title-Full {
-    opacity: 0;
+
+
+  & .Title-Full, .Title-Partial, .Header-Title-GitHub__icon {
+    transition: all 0.3s ease;
+    transition-delay: .2s;
   }
 
   &:hover {
     .Header-Title .Title-Partial {
       letter-spacing: 10px;
-    }
-
-    .Title-Full {
-      opacity: 1;
     }
   }
 
@@ -24,11 +23,6 @@
     flex-direction: row nowrap;
     justify-content: center;
     align-items: center;
-
-    & * {
-      transition: all 0.3s ease;
-      transition-delay: .2s;
-    }
 
     & span {
       font-size: 5vw;
@@ -43,11 +37,18 @@
       height: 2.8vw;
       cursor: pointer;
     }
+
+    & .Title-Full {
+      opacity: 0;
+    }
   }
 
   &:hover {
     .Header-Title-GitHub__icon {
-      transform: translateX(10vw);
+      transform: translateX(4vw);
+    }
+    .Title-Full {
+      opacity: 1;
     }
   }
 

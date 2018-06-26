@@ -4,12 +4,10 @@ import '../styles/NavBar.scss';
 export default class NavBar extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-    }
   }
 
   showProject = (index) => {
-    console.log(index)
+    this.props.onProjectSelected(index);
   }
 
   render() {
@@ -20,7 +18,7 @@ export default class NavBar extends Component {
             return (
               <div className='NavBar__item' id={'index_' + index} onClick={ (e) => this.showProject(e.target.id) } key={ index } >
                 <span>{ item.name }</span>
-                <a target='' href=''><img src='' alt={'gh-pages_' + item.name.split(' ').join('_') } /></a>
+                {/*<a target='' href=''><img src='' alt={'gh-pages_' + item.name.split(' ').join('_') } /></a>*/}
               </div>
           );
           })

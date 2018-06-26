@@ -2,15 +2,23 @@
   "projects": [
     {
       "name": "Simon Game",
-      "description": ""
+      "repository": "simon-game",
+      "snippet": "FreeCodeCamp Project"
     },
     {
       "name": "Kando",
-      "description": "Minimalistic task management utility for daily tasks"
+      "repository": "kando",
+      "snippet": "Minimalistic task management utility for daily tasks"
     },
     {
       "name": "Markdown Previewer",
-      "description": "Translate Markdown into HTML"
+      "repository": "markdown-previewer",
+      "snippet": "Translate Markdown into HTML"
+    },
+    {
+      "name": "Recipe Box",
+      "repository": "recipe-box",
+      "snippet": "Interactive table of user-defined recipes"
     }
   ]
 }

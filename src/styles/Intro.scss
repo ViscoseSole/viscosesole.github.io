@@ -1,0 +1,25 @@
+.Intro {
+  width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  .Intro-Header-Title {
+    opacity: 0.5;
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 3vw;
+    user-select: none;
+  }
+  .Intro-Project-Snippet {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    & * {
+      margin: 0 5px;
+    }
+  }
+}

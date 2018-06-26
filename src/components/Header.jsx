@@ -15,7 +15,7 @@ export default class Header extends Component {
       <div id='Header'>
         <div className='Header-Title'>
           <span>
-            <span className='Title-Partial'>N.H. Portfoli</span>
+            <span className='Title-Partial'>nhult.github.i{/* N.H. Portfoli */}</span>
             <span className='Title-Full'>o</span>
             <a target='_blank' href='https://github.com/nhult'><img className='Header-Title-GitHub__icon' src={ GitHubLogo } alt='GitHub-Logo' /></a>
           </span>

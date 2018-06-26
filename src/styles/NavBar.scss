@@ -12,22 +12,27 @@
   border-left: none;
 
   transition: none;
+  z-index: 10;
 
   & .NavBar__item {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: center; /**/
     align-items: center;
 
     width: 18vw;
     height: 9vw;
-    min-width: 80px;
-    min-height: 60px;
+
+    font-size: 1.2vw;
 
     overflow: hidden;
     cursor: pointer;
     margin: 3px;
-    background: #a29bfe;
+    background: #F8EFBA;
+
+    & span {
+      user-select: none;
+    }
   }
 
   & .NavBar__item:first-child {
