@@ -7,7 +7,8 @@
   "author": "nhult <n.hulttinen97@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --mode=development --open"
+    "dev": "webpack-dev-server --mode=development --open",
+    "dist": "webpack --mode=production"
   },
   "dependencies": {
     "react": "^16.4.1",
