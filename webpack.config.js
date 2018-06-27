@@ -39,7 +39,7 @@ module.exports = {
     extensions: ['*', '.js', '.jsx']
   },
   output: {
-    path: __dirname + '/docs',
+    path: __dirname,
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -47,7 +47,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
-    contentBase: './docs',
+    contentBase: '/',
     port: 3000,
     hot: true
   }
