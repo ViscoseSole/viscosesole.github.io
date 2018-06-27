@@ -23,8 +23,9 @@
     width: 18vw;
     height: 9vw;
 
-    font-size: 1.2vw;
+    max-height: 5vw;
 
+    font-size: 1.2vw;
     overflow: hidden;
     cursor: pointer;
     margin: 3px;
@@ -32,6 +33,16 @@
 
     & span {
       user-select: none;
+      transition: all .2s;
+      transform: scale(1)
+    }
+  }
+
+  & .item__selected {
+    opacity: .8;
+    & span {
+      transition: all .2s;
+      transform: scale(1.1)
     }
   }
 

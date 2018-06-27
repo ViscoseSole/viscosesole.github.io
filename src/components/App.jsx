@@ -10,14 +10,14 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      projectSelected: ''
+      projectSelected: null
     }
   }
 
   selectProject = (index) => {
     let indexSelected = Number(index.split('_')[1]);
 
-    indexSelected === this.state.projectSelected ?
+    indexSelected == this.state.projectSelected ?
       this.setState({projectSelected: null}) :
       this.setState({projectSelected: indexSelected});
   }
@@ -26,7 +26,7 @@ export default class App extends Component {
     return (
       <div>
         <Header />
-        <NavBar ghpages={ ghpages.projects } onProjectSelected={ this.selectProject } />
+        <NavBar ghpages={ ghpages.projects } onProjectSelected={ this.selectProject } indexSelected={ this.state.projectSelected } />
         <Intro projectSelected={ ghpages.projects[this.state.projectSelected] } />
       </div>
     );
