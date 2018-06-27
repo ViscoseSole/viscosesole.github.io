@@ -12,7 +12,6 @@
   border-left: none;
 
   transition: none;
-  z-index: 10;
 
   & .NavBar__item {
     display: flex;
@@ -21,11 +20,9 @@
     align-items: center;
 
     width: 18vw;
-    height: 9vw;
+    height: 6vw;
 
-    max-height: 5vw;
-
-    font-size: 1.2vw;
+    font-size: 2vw;
     overflow: hidden;
     cursor: pointer;
     margin: 3px;
@@ -33,7 +30,7 @@
 
     & span {
       user-select: none;
-      transition: all .2s;
+      transition: all .15s;
       transform: scale(1)
     }
   }
@@ -41,15 +38,28 @@
   & .item__selected {
     opacity: .8;
     & span {
-      transition: all .2s;
-      transform: scale(1.1)
+      transition: all .1s;
+      transform: scale(0.9)
     }
   }
-
   & .NavBar__item:first-child {
     margin-left: 100px;
   }
   & .NavBar__item:last-child {
     margin-right: 100px;
+  }
+
+  @media (max-width: 1000px) {
+    & .NavBar__item {
+      width: 25vw;
+      height: 7vw;
+      font-size: 2vw;
+    }
+    & .NavBar__item:first-child {
+      margin-left: 0;
+    }
+    & .NavBar__item:last-child {
+      margin-right: 0;
+    }
   }
 }
