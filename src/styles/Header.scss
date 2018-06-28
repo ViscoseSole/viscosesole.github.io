@@ -3,9 +3,7 @@
   height: auto;
   display: flex;
 
-
-
-  & .Title-Full, .Title-Partial, .Header-Title-GitHub__icon {
+  & .Title-Full, .Title-Partial, .Header-Title-GitHub__icon, h3 {
     transition: all 0.3s ease;
     transition-delay: .2s;
   }
@@ -41,6 +39,16 @@
     & .Title-Full {
       opacity: 0;
     }
+
+    h3 {
+      font-size: 2vw;
+      transform: translate(0, 0.5vw);
+      opacity: 0;
+      background: #ccc;
+      width: 13vw;
+      height: 2.5vw;
+      text-align: center;
+    }
   }
 
   &:hover {
@@ -49,6 +57,10 @@
     }
     .Title-Full {
       opacity: 1;
+    }
+    h3 {
+      opacity: .6;
+      transform: translate(8vw, 0.5vw);
     }
   }
 
