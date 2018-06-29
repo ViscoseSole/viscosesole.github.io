@@ -26,8 +26,10 @@
   }
   .Intro-Header-Title span {
     position: absolute;
-    top: 1.4vw;
-    right: -12vw;
+    top: 1.9vw;
+    right: -10vw;
+    font-size: 1.5vw;
+    user-select: none;
   }
   .Intro-Project-Snippet {
     display: flex;

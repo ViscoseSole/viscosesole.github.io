@@ -43,7 +43,7 @@
     h3 {
       font-size: 2vw;
       transform: translate(0, 0.5vw);
-      opacity: 0;
+      opacity: 1;
       width: 13vw;
       height: 2.5vw;
       text-align: center;
@@ -54,22 +54,85 @@
 
       -webkit-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
       -moz-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
-      box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
+      box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.12);
     }
   }
 
-  &:hover {
+  & /*:hover*/ {
+    * {
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in;
+    }
+    .Header-Title .Title-Partial {
+      animation: 1.8s letter-spacing-collapse .5s;
+    }
     .Header-Title-GitHub__icon {
-      transform: translateX(4vw);
+      /*transform: translateX(4vw);*/
+      animation: 1.8s github-icon-slide-right .5s;
     }
     .Title-Full {
       opacity: 1;
+      animation: 1.8s full-title-fadein .5s;
     }
     h3 {
       opacity: .6;
       transform: translate(10vw, 0.5vw);
+      animation: 1.8s aboutme-slide-right .5s;
     }
   }
+  /*instead of :hover, and messing with the user trying to click on my github profile or about me page, i'll make the animation happen on page load using keyframes*/
+  @keyframes github-icon-slide-right {
+    0% {
+      transform: translateX(-3vw);
+    }
+    50% {
+      transform: translateX(4vw);
+    }
+    96%, 100% {
+      transform: translateX(-3vw);
+    }
+  }
+  @keyframes full-title-fadein {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    76% {
+      opacity: 1;
+    }
+    96%, 100% {
+      opacity: 0;
+    }
+  }
+  @keyframes aboutme-slide-right {
+    0% {
+      opacity: 1;
+      transform: translate(0, 0.5vw);
+    }
+    50% {
+      opacity: .6;
+      transform: translate(10vw, 0.5vw);
+    }
+    96%, 100% {
+      opacity: 1;
+      transform: translate(0, 0.5vw);
+    }
+  }
+  @keyframes letter-spacing-collapse {
+    0% {
+      letter-spacing: 3px;
+    }
+    50% {
+      opacity: .6;
+      letter-spacing: 10px;
+    }
+    96%, 100% {
+      letter-spacing: 3px;
+    }
+  }
+  /**/
 
   @media (max-width: 1000px) {
     &:hover {
