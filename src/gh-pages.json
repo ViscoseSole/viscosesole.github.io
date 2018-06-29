@@ -13,7 +13,7 @@
     {
       "name": "Markdown Previewer",
       "repository": "markdown-previewer",
-      "snippet": "Translates written Markdown into HTML"
+      "snippet": "Live preview of written markdown as HTML"
     },
     {
       "name": "Recipe Box",

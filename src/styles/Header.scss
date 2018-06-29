@@ -34,9 +34,11 @@
       width: 2.8vw;
       height: 2.8vw;
       cursor: pointer;
+      border-radius: 50%;
     }
 
     & .Title-Full {
+      display: inline-block;
       opacity: 0;
     }
 
@@ -47,37 +49,45 @@
       width: 13vw;
       height: 2.5vw;
       text-align: center;
-      background: rgba(47, 54, 64, .1);
+      background: rgba(47, 54, 64, .07);
       cursor: pointer;
       user-select: none;
       border-radius: 1px;
 
-      -webkit-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
-      -moz-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
-      box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.12);
+      -webkit-box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.12);
+      -moz-box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.12);
+      box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.12);
     }
   }
 
+  &:hover {
+
+  }
   & /*:hover*/ {
     * {
       animation-fill-mode: forwards;
       animation-timing-function: ease-in;
     }
     .Header-Title .Title-Partial {
-      animation: 1.8s letter-spacing-collapse .5s;
+      animation: 3s letter-spacing-expand-collapse .5s;
     }
     .Header-Title-GitHub__icon {
+      opacity: 1;
       /*transform: translateX(4vw);*/
-      animation: 1.8s github-icon-slide-right .5s;
+      animation: 3s github-icon-slide-right .5s;
     }
     .Title-Full {
+      /*
+      animation: 3s full-title-slide-right .5s;
+      */
+      transform: translateX(0);
       opacity: 1;
-      animation: 1.8s full-title-fadein .5s;
+      animation: 3s full-title-slide-right .5s;
     }
     h3 {
       opacity: .6;
       transform: translate(10vw, 0.5vw);
-      animation: 1.8s aboutme-slide-right .5s;
+      animation: 3s aboutme-slide-right .5s;
     }
   }
   /*instead of :hover, and messing with the user trying to click on my github profile or about me page, i'll make the animation happen on page load using keyframes*/
@@ -92,14 +102,35 @@
       transform: translateX(-3vw);
     }
   }
+  @keyframes full-title-slide-right {
+    0% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(1.5vw);
+      opacity: 0;
+    }
+    70% {
+      transform: translateX(1.3vw);
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+  }
   @keyframes full-title-fadein {
     0% {
       opacity: 0;
     }
-    20% {
+    5% {
       opacity: 1;
     }
-    76% {
+    91% {
       opacity: 1;
     }
     96%, 100% {
@@ -120,7 +151,7 @@
       transform: translate(0, 0.5vw);
     }
   }
-  @keyframes letter-spacing-collapse {
+  @keyframes letter-spacing-expand-collapse {
     0% {
       letter-spacing: 3px;
     }
