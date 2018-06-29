@@ -3,7 +3,7 @@
     {
       "name": "Simon Game",
       "repository": "simon-game",
-      "snippet": "FreeCodeCamp Project"
+      "snippet": "Sequence memorization game with four colors"
     },
     {
       "name": "Kando",
@@ -13,7 +13,7 @@
     {
       "name": "Markdown Previewer",
       "repository": "markdown-previewer",
-      "snippet": "Translate Markdown into HTML"
+      "snippet": "Translates written Markdown into HTML"
     },
     {
       "name": "Recipe Box",

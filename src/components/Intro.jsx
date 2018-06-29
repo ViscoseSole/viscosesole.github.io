@@ -13,11 +13,19 @@ export default class Intro extends Component {
 
     return (
       <main className='Intro'>
-        <h1 className='Intro-Header-Title'>{ title }</h1>
-        <div className='Intro-Project-Snippet'>
-          <p>{ snippet }</p>
-          { snippet ? <a target='_blank' href={'http://nhult.github.io/' + repository}><span>(Try it here!)</span></a> : '' }
+        <div className='Intro-Header-Title'>
+          <h1>{ title }</h1>
+          { snippet ? <a target='_blank' href={'http://nhult.github.io/' + repository}><span> Try it here!</span></a> : '' }
         </div>
+        {
+          this.props.projectSelected !== null ?
+          (
+            <div className='Intro-Project-Snippet'>
+            <h4>What is it? </h4>
+            <p>{ snippet }</p>
+          </div>
+        ) : false
+        }
       </main>
     );
   }

@@ -44,10 +44,17 @@
       font-size: 2vw;
       transform: translate(0, 0.5vw);
       opacity: 0;
-      background: #ccc;
       width: 13vw;
       height: 2.5vw;
       text-align: center;
+      background: rgba(47, 54, 64, .1);
+      cursor: pointer;
+      user-select: none;
+      border-radius: 1px;
+
+      -webkit-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
+      -moz-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
+      box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
     }
   }
 
@@ -60,7 +67,7 @@
     }
     h3 {
       opacity: .6;
-      transform: translate(8vw, 0.5vw);
+      transform: translate(10vw, 0.5vw);
     }
   }
 

@@ -27,7 +27,11 @@ export default class App extends Component {
       <div>
         <Header />
         <NavBar ghpages={ ghpages.projects } onProjectSelected={ this.selectProject } indexSelected={ this.state.projectSelected } />
-        <Intro projectSelected={ ghpages.projects[this.state.projectSelected] } />
+        {
+          this.state.projectSelected !== null ?
+          (<Intro projectSelected={ ghpages.projects[this.state.projectSelected] } />) :
+          (<Intro projectSelected={ null } />)
+        }
       </div>
     );
   }

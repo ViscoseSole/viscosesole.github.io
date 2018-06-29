@@ -4,22 +4,45 @@
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
+  font-size: 2vw;
 
   .Intro-Header-Title {
-    opacity: 0.5;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     margin-top: 40px;
+
+    & * {
+      margin: 0;
+    }
+  }
+  .Intro-Header-Title h1 {
+    opacity: 0.5;
     font-weight: 400;
-    font-size: 3vw;
+    font-size: 4vw;
     user-select: none;
+  }
+  .Intro-Header-Title span {
+    position: absolute;
+    top: 1.4vw;
+    right: -12vw;
   }
   .Intro-Project-Snippet {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    margin-top: 40px;
 
     & * {
       margin: 0 5px;
     }
+  }
+
+  h4 {
+    letter-spacing: 1px;
+    font-weight: bold;
   }
 }
