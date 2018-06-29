@@ -21,7 +21,7 @@ export default class Intro extends Component {
           this.props.projectSelected !== null ?
           (
             <div className='Intro-Project-Snippet'>
-            <h4>What is it? </h4>
+            <h4>What is it?</h4>
             <p>{ snippet }</p>
           </div>
         ) : false
