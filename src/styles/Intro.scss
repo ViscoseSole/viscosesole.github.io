@@ -5,6 +5,20 @@
   justify-content: flex-start;
   align-items: center;
   font-size: 2vw;
+  animation: 2s slidedown;
+  animation-fill-mode: forwards;
+
+  @keyframes slidedown {
+    0% {
+      height: 2px;
+      transform: translateY(100vw);
+    }
+    100% {
+      height: auto;
+      transform: translateY(0);
+      width: 100vw;
+    }
+  }
 
   .Intro-Header-Title {
     position: relative;

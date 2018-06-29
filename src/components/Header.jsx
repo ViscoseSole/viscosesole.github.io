@@ -6,8 +6,6 @@ import GitHubLogo from '../assets/GitHub-Mark/PNG/GitHub-Mark-120px-plus.png';
 export default class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-    }
   }
 
   render() {
@@ -19,7 +17,7 @@ export default class Header extends Component {
             <span className='Title-Full'>o</span>
             <a target='_blank' href='https://github.com/nhult'><img className='Header-Title-GitHub__icon' src={ GitHubLogo } alt='GitHub-Logo' /></a>
           </span>
-          <h3>ABOUT ME</h3>
+          <h3 onClick={ this.props.onToggle }>ABOUT ME</h3>
         </div>
       </div>
     );

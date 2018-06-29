@@ -49,14 +49,18 @@
       width: 13vw;
       height: 2.5vw;
       text-align: center;
-      background: rgba(47, 54, 64, .07);
       cursor: pointer;
       user-select: none;
       border-radius: 1px;
+      background: #fff;
 
       -webkit-box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.12);
       -moz-box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.12);
       box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.12);
+
+      &:hover {
+        background: rgba(47, 54, 64, .07);
+      }
     }
   }
 
@@ -113,7 +117,7 @@
     }
     70% {
       transform: translateX(1.3vw);
-      opacity: 1;
+      opacity: .7;
     }
     80% {
       opacity: 0;
@@ -145,6 +149,12 @@
     50% {
       opacity: .6;
       transform: translate(10vw, 0.5vw);
+    }
+    55% {
+      background: rgba(47, 54, 64, .1);
+    }
+    80% {
+      background: #fff;
     }
     96%, 100% {
       opacity: 1;
